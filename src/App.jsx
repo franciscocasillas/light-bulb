@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import LightSwitch from "./components/LightSwitch";
+import LightBulb from "./components/LightBulb";
 
 function App() {
 	const [isLightOn, setIsLightOn] = useState(false);
@@ -11,6 +12,7 @@ function App() {
 
 	return (
 		<div>
+			<LightBulb isOn={isLightOn} />
 			<LightSwitch isOn={isLightOn} toggleLight={handleToggleLight} />
 		</div>
 	);
